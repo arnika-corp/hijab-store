@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Special Products 3 Items-->
+<div class="card-deck mx-0 mb-5 py-1">
+    
+    <!-- First Item -->
+    <div class="card wow fadeInRight">
+        <a href="{% static 'images/product-01.jpg' %}" data-lightbox="product-01">
+            <img src="{% static 'images/product-01.jpg' %}" class="card-img-top c-mouse" alt="">
+        </a>
+        <div class="card-body text-center">
+            <h4 class="card-title">چادر</h4>
+            <p class="card-text my-3">تولید انواع چادر با پارچه انحصاری</p>
+        </div>
+    </div>
+    
+    <!-- Second Item -->
+    <div class="card wow fadeInUp">
+        <a href="{% static 'images/product-02.jpg' %}" data-lightbox="product-02">
+            <img src="{% static 'images/product-02.jpg' %}" class="card-img-top c-mouse" alt="">
+        </a>
+        <div class="card-body text-center">
+            <h4 class="card-title">مانتو شال</h4>
+            <p class="card-text my-3">تولید انواع مانتو شال با پارچه انحصاری</p>
+        </div>
+    </div>
+    
+    <!-- Third Item -->
+    <div class="card wow fadeInLeft">
+        <a href="{% static 'images/product-03.jpg' %}" data-lightbox="product-03">
+            <img src="{% static 'images/product-03.jpg' %}" class="card-img-top c-mouse" alt="">
+        </a>
+        <div class="card-body text-center">
+            <h4 class="card-title">مقنعه</h4>
+            <p class="card-text my-3">تولید انواع مقنعه با پارچه انحصاری</p>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Special Products 4 Items -->
+<div class="card-deck mx-0 mb-5 py-1">
+    
+    <!-- Item -->
+    <div class="card wow fadeInUp">
+        <a href="{% static 'images/product-04.jpg' %}" data-lightbox="product-04">
+            <img src="{% static 'images/product-04.jpg' %}" class="card-img-top c-mouse" alt="">
+        </a>
+        <div class="card-body text-center">
+            <h4 class="card-title">هد بند</h4>
+            <p class="card-text my-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+        </div>
+    </div>
+    
+    <!-- Item -->
+    <div class="card wow fadeInUp">
+        <a href="{% static 'images/product-05.jpg' %}" data-lightbox="product-05">
+            <img src="{% static 'images/product-05.jpg' %}" class="card-img-top c-mouse" alt="">
+        </a>
+        <div class="card-body text-center">
+            <h4 class="card-title">ساق دست</h4>
+            <p class="card-text my-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+        </div>
+    </div>
+    
+    <!-- Item -->
+    <div class="card wow fadeInUp">
+        <a href="{% static 'images/product-06.jpg' %}" data-lightbox="product-06">
+            <img src="{% static 'images/product-06.jpg' %}" class="card-img-top c-mouse" alt="">
+        </a>
+        <div class="card-body text-center">
+            <h4 class="card-title">دستکش</h4>
+            <p class="card-text my-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+        </div>
+    </div>
+    
+    <!-- Item -->
+    <div class="card wow fadeInUp">
+        <a href="{% static 'images/product-07.jpg' %}" data-lightbox="product-07">
+            <img src="{% static 'images/product-07.jpg' %}" class="card-img-top c-mouse" alt="">
+        </a>
+        <div class="card-body text-center">
+            <h4 class="card-title">جوراب</h4>
+            <p class="card-text my-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Jumbotron -->   
+<div class="jumbotron wow zoomIn">
+    <h1 class="display-5">شرکت تولیدی و فروشگاه حجاب لاله</h1>
+    <hr class="my-4">
+    <p class="lead justify">
+        ما توانسته ایم علاوه بر گردآوری تمامی محصولات حجاب از برندهای معتبر تولیدی حجاب
+        در کشور و فروش محصولات آنها به قیمت درب کارخانه و تولیدات متنوع دیگر برای 
+        هر چه آسانتر کردن خرید تمامی ملزومات حجاب برای شما عزیزان.
+    </p>    
+</div>
+
+<!-- New Recived Products Title -->
+<div class="mb-3">
+    <h2 class="text-center">جدیدترین محصولات</h2>
+</div>
+
+<!-- New Recived Products Items -->
+<div class="owl-carousel mb-5">
+    
+    <div class="card border-0">
+        <img src="{% static 'images/product-01.jpg' %}" class="card-img-top rounded" alt="">
+        <div class="card-body text-center">
+            <h4 class="card-title">لورم ایپسوم</h4>
+        </div>
+    </div>
+    
+    <div class="card border-0">
+        <img src="{% static 'images/product-02.jpg' %}" class="card-img-top rounded" alt="">
+        <div class="card-body text-center">
+            <h4 class="card-title">لورم ایپسوم</h4>
+        </div>
+    </div>
+    
+    <div class="card border-0">
+        <img src="{% static 'images/product-03.jpg' %}" class="card-img-top rounded" alt="">
+        <div class="card-body text-center">
+            <h4 class="card-title">لورم ایپسوم</h4>
+        </div>
+    </div>
+    
+    <div class="card border-0">
+        <img src="{% static 'images/product-04.jpg' %}" class="card-img-top rounded" alt="">
+        <div class="card-body text-center">
+            <h4 class="card-title">لورم ایپسوم</h4>
+        </div>
+    </div>
+    
+    <div class="card border-0">
+        <img src="{% static 'images/product-05.jpg' %}" class="card-img-top rounded" alt="">
+        <div class="card-body text-center">
+            <h4 class="card-title">لورم ایپسوم</h4>
+        </div>
+    </div>
+    
+    <div class="card border-0">
+        <img src="{% static 'images/product-06.jpg' %}" class="card-img-top rounded" alt="">
+        <div class="card-body text-center">
+            <h4 class="card-title">لورم ایپسوم</h4>
+        </div>
+    </div>
+    
+    <div class="card border-0">
+        <img src="{% static 'images/product-07.jpg' %}" class="card-img-top rounded" alt="">
+        <div class="card-body text-center">
+            <h4 class="card-title">لورم ایپسوم</h4>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Brands Title -->
+<div class="mb-3">
+    <h2 class="text-center">برندها</h2>
+</div>
+
+<!-- Brands Itmes -->
+<div class="d-flex flex-wrap-reverse justify-content-around mb-5 py-2">
+    <div>
+        <img src="{% static 'images/brand-lale.jpg' %}" class="brand" alt="">
+    </div>
+    <div>
+        <img src="{% static 'images/brand-sana.jpg' %}" class="brand" alt="">
+    </div>
+</div>
+
+{% endblock %}

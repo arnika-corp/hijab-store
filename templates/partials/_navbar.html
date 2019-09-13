@@ -1,0 +1,90 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light py-0" style="background-color: cornsilk">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse mr-3" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            {% if request.path == '/' %}
+            <li class="nav-item active">
+            {% else %}
+            <li class="nav-item">
+            {% endif %}
+                <a class="nav-link" href="{% url 'core:index' %}">خانه <span class="sr-only">(current)</span></a>
+            </li>
+            {% if 'about' in request.path %}
+            <li class="nav-item active">
+            {% else %}
+            <li class="nav-item">
+            {% endif %}
+                <a class="nav-link" href="{% url 'core:about' %}">درباره</a>
+            </li>
+            {% if 'contact' in request.path %}
+            <li class="nav-item active">
+            {% else %}
+            <li class="nav-item">
+            {% endif %}
+                <a class="nav-link" href="{% url 'core:contact' %}">تماس</a>
+            </li>
+            {% if 'products/index' in request.path %}
+            <li class="nav-item active">
+            {% else %}
+            <li class="nav-item">
+            {% endif %}
+                <a class="nav-link" href="{% url 'products:products' %}">محصولات</a>
+            </li>
+            {% if 'favorite' in request.path %}
+            <li class="nav-item active">
+            {% else %}
+            <li class="nav-item">
+            {% endif %}
+                <a class="nav-link" href="{% url 'products:favorite' %}">علاقه مندی</a>
+            </li>
+            {% if 'shopping-cart' in request.path %}
+            <li class="nav-item active">
+            {% else %}
+            <li class="nav-item">
+            {% endif %}
+                <a class="nav-link" href="{% url 'products:shopping-cart' %}">سبد خرید</a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Left Section -->
+    <!-- Button trigger modal -->
+    <a href="" class="livicon" data-name="search" data-toggle="modal" data-target="#searchModal"></a>
+    
+    <a href="{% url 'products:favorite' %}" class="text-decoration-none m-3">
+        <span>۰</span>
+        <span class="livicon" data-name="heart" data-color="red"></span>
+    </a>
+    
+    <a href="{% url 'products:shopping-cart' %}" class="text-decoration-none">
+        <span>۰</span>
+        <span class="livicon" data-name="shopping-cart"></span>
+    </a>
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">جستجوی کالا</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="input-group mb-3">
+                        <input type="text" name="search" id="search" class="form-control" placeholder="دنبال چی بگردم؟" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">جستجو</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

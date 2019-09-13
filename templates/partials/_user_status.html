@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded  mb-3">
+    {% if user.is_authenticated %}
+    <!-- Logged User -->
+    <div class="dropdown">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="loggedUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="fas fa-user-alt mr-2"></span>
+            {{ user.first_name|default:user.username }} عزیز خوش آمدید
+        </button>
+        <div class="dropdown-menu" aria-labelledby="loggedUser">
+            <a class="dropdown-item" href="{% url 'products:favorite' %}">
+                <span class="livicon mr-2" data-name="heart" data-color="red" data-size="24"></span>علاقه مندی ها
+            </a>
+            <a class="dropdown-item" href="{% url 'products:shopping-cart' %}">
+                <span class="livicon mr-2" data-name="shopping-cart" data-size="24"></span>سبد خرید
+            </a>
+            
+            <div class="dropdown-divider"></div>
+            
+            <a class="dropdown-item disabled" href="#">
+                <span class="livicon mr-2" data-name="gift" data-color="red" data-size="24"></span>هدیه
+            </a>
+            
+            <div class="dropdown-divider"></div>
+            
+            <a class="dropdown-item" href="{% url 'admin:index' %}">
+                <span class="livicon mr-2" data-name="dashboard" data-size="24"></span>مدیریت وبگاه
+            </a>
+            <a class="dropdown-item" href="{% url 'password_change' %}">
+                <span class="livicon mr-2" data-name="lock" data-size="24"></span>تغییر گذر واژه
+            </a>
+            
+            <div class="dropdown-divider"></div>
+            
+            <a class="dropdown-item" href="{% url 'logout' %}">
+                <span class="livicon mr-2" data-name="sign-out" data-size="24"></span>خروج
+            </a>
+        </div>
+    </div> 
+    {% else %}            
+    <!-- Guest User -->
+    <div class="dropdown">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="guestUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="fas fa-user-alt mr-2"></span>
+            مهمان گرامی خوش آمدید
+        </button>
+        <div class="dropdown-menu" aria-labelledby="guestUser">
+            <a class="dropdown-item" href="{% url 'login' %}">
+                <span class="livicon mr-2" data-name="sign-in" data-size="24"></span>ورود
+            </a>
+            <a class="dropdown-item" href="{% url 'core:signup' %}">
+                <span class="livicon mr-2" data-name="user-add" data-size="24"></span>ثبت نام
+            </a>
+        </div>
+    </div> 
+    {% endif %}
+</nav>

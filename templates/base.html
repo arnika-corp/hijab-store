@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'icon/icon.ico' %}" title="favicon">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <!-- Animate -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    
+    <!-- Lightbox2 -->
+    <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+    
+    <!-- Owl Carousel 2 -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <title>فروشگاه آنلاین {{ core|default:'آرنیکا' }}</title>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    {% include 'partials/_navbar.html' %}
+    
+    
+    <!-- Carousel -->
+    {% include 'partials/_carousel.html' %}
+    
+    <!-- Container -->
+    <div class="container mb-3 p-2">
+        
+        <!-- User Status -->
+        {% include 'partials/_user_status.html' %}
+        
+        <!-- Content -->
+        {% block content %}{% endblock %}
+        
+    </div>
+    
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+    
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    
+    <!-- Font Awesome -->
+    <script src="{% static 'js/all.js' %}"></script>
+    
+    <!-- WOW -->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script>
+        new WOW().init();
+    </script>
+    
+    <!-- Lightbox 2 -->
+    <script src="{% static 'js/lightbox.js' %}"></script>
+    
+    <!-- Owl Carousel 2 -->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    
+    <!-- Custom JS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+    
+    <!-- Live Icons -->
+    <script src="{% static 'js/raphael-min.js' %}"></script>
+    <script src="{% static 'js/livicons.js' %}"></script>
+</body>
+</html>
